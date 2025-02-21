@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 .content {
-    max-width: 800px;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -143,5 +143,10 @@ html {
 
     nav li {
         margin: 0.5rem 0;
+    }
+    
+    .profile-pic {
+        width: 300px;
+        height: 300px;
     }
 }
