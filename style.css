@@ -1,37 +1,74 @@
-/* General Page Styling */
+/* style.css */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #d0e8f2; /* Light blue */
+    background-color: #d0e8f2;
     color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(208, 232, 242, 0.9);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1a6b8f;
+}
+
+/* Section Styling */
+.section {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 2rem;
+    scroll-snap-align: start;
 }
 
-/* Centered Container with Two Columns */
-.container {
+.content {
+    max-width: 800px;
+    width: 90%;
     display: flex;
     align-items: center;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Wider container */
-    width: 90%; /* Responsive width */
 }
 
-/* Text Section (Left) */
+/* Home Section Specific */
+#home .content {
+    justify-content: space-between;
+}
+
 .text-section {
-    flex: 1; /* Takes up available space */
-    text-align: left;
-    padding-right: 20px;
+    flex: 1;
+    padding-right: 2rem;
 }
 
-/* Profile Picture (Right) */
 .profile-pic {
-    width: 200px; /* Bigger image */
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -45,4 +82,32 @@ body {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
 }
