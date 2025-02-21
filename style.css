@@ -1,9 +1,25 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #d0e8f2;
     color: #333;
     margin: 0;
     padding: 0;
+}
+
+/* Different background colors for each section */
+#home {
+    background-color: #d0e8f2;  /* Light blue (your original color) */
+}
+
+#about {
+    background-color: #f2e6d0;  /* Warm beige */
+}
+
+#projects {
+    background-color: #d0f2e6;  /* Mint green */
+}
+
+#contact {
+    background-color: #e6d0f2;  /* Light purple */
 }
 
 /* Navigation Styling */
