@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function typeEffect() {
         currentPhrase = phrases[phraseIndex];
-
         if (isDeleting) {
             textElement.innerHTML = currentPhrase.substring(0, letterIndex - 1);
             letterIndex--;
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let speed = isDeleting ? 50 : 100;
-
         if (!isDeleting && letterIndex === currentPhrase.length) {
             speed = 1500; // Pause after finishing a phrase
             isDeleting = true;
@@ -32,4 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     typeEffect();
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const section = document.querySelector(this.getAttribute('href'));
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
