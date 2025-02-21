@@ -96,8 +96,8 @@ nav a:hover {
 }
 
 .profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 800px;
+    height: 800px;
     border-radius: 0;
     object-fit: cover;
     opacity: 0;  /* Start invisible */
