@@ -42,3 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Progressive image loading
+document.querySelectorAll('img.lazy').forEach(img => {
+    // Create a new image object
+    const fullRes = new Image();
+    
+    // When the full resolution image loads
+    fullRes.onload = () => {
+        img.src = fullRes.src;  // Switch to full resolution image
+        img.classList.add('loaded');  // Trigger fade in
+    };
+    
+    // Start loading the full resolution image
+    fullRes.src = img.dataset.src;
+});
