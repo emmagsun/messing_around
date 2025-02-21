@@ -95,6 +95,10 @@ nav a:hover {
     padding-right: 2rem;
 }
 
+.text-section h1 {
+    font-size: 3.5rem;  /* Makes the text much larger */
+    margin-bottom: 1rem; /* Adds some space between the heading and the typing text */
+}
 .profile-pic {
     width: 500px;
     height: 500px;
