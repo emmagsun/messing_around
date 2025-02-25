@@ -244,3 +244,128 @@ html {
         width: 80%;
         max-width: 250px;
     }
+/* Contact Section Styling */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info, .resume-section, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Methods */
+.contact-methods {
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6d0f2;
+    border-radius: 50%;
+}
+
+.contact-details h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-details a {
+    color: #1a6b8f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #0f3f54;
+    text-decoration: underline;
+}
+
+/* Resume Section */
+.resume-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1a6b8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #0f3f54;
+}
+
+.resume-note {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Contact Form */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.submit-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #1a6b8f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0f3f54;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info, .resume-section, .contact-form {
+        width: 100%;
+    }
+}
