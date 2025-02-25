@@ -155,10 +155,20 @@ html {
     }
 }
 /* Project Categories */
+.projects-intro {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .project-categories {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 2rem;
     flex-wrap: wrap;
 }
@@ -169,26 +179,28 @@ html {
     align-items: center;
     text-decoration: none;
     color: #333;
-    width: 200px;
-    padding: 1.5rem;
-    border-radius: 10px;
+    width: 280px;
+    height: 280px;
+    padding: 2.5rem;
+    border-radius: 15px;
     background-color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center;
 }
 
 .project-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .project-button .icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-radius: 50%;
 }
 
@@ -208,13 +220,13 @@ html {
 }
 
 .project-button .icon svg {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 .project-button span {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 /* Media Query for Mobile Responsiveness */
