@@ -57,3 +57,56 @@ document.querySelectorAll('img.lazy').forEach(img => {
     // Start loading the full resolution image
     fullRes.src = img.dataset.src;
 });
+
+// Contact Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // You can implement actual form submission here
+            // For now, we'll just show a success message
+            alert(`Thank you ${name}! Your message has been sent.`);
+            
+            // Reset the form
+            contactForm.reset();
+            
+            /* 
+            // If you want to implement actual email sending, you could use a service like FormSpree
+            // Replace the alert with this code and update the action URL
+            
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', message);
+            
+            fetch('https://formspree.io/f/your-form-id', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert(`Thank you ${name}! Your message has been sent.`);
+                    contactForm.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            })
+            .catch(error => {
+                alert('Oops! There was a problem submitting your form.');
+                console.error(error);
+            });
+            */
+        });
+    }
+});
