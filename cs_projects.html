@@ -1,0 +1,160 @@
+Computer Science Projects
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Sun | CS Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            margin-top: 0;
+            color: #1890ff;
+        }
+        
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card .tag {
+            background-color: #e6f7ff;
+            color: #1890ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .project-card .links {
+            margin-top: 1rem;
+        }
+        
+        .project-card .links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: #1890ff;
+            text-decoration: none;
+        }
+        
+        .project-card .links a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .back-button:hover {
+            color: #1890ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section" style="background-color: #f9f9f9; padding-top: 100px;">
+        <div class="content">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+            
+            <h2>Computer Science Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>AI-Powered Energy Optimization</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Energy</span>
+                    </div>
+                    <p>A machine learning system that optimizes energy consumption in buildings by analyzing usage patterns and environmental factors.</p>
+                    <div class="links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Sustainable Computing Framework</h3>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Sustainability</span>
+                    </div>
+                    <p>A framework for measuring and optimizing the carbon footprint of web applications and cloud computing resources.</p>
+                    <div class="links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Website</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Data Visualization for Climate Science</h3>
+                    <div class="tags">
+                        <span class="tag">D3.js</span>
+                        <span class="tag">Data Science</span>
+                        <span class="tag">Climate</span>
+                    </div>
+                    <p>Interactive visualization tools that make complex climate data more accessible and understandable for researchers and the public.</p>
+                    <div class="links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').includes('#')) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('href').split('#')[0];
+                    const targetSection = this.getAttribute('href').split('#')[1];
+                    
+                    if (targetPage === '' || targetPage === 'index.html') {
+                        const section = document.querySelector('#' + targetSection);
+                        if (section) {
+                            section.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
